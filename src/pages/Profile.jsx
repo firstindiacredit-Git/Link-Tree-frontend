@@ -10,13 +10,13 @@ const themes = {
     container: 'bg-white/10 backdrop-blur-md'
   },
   dark: {
-    background: 'bg-gray-900',
+    background: 'bg-gray-700',
     text: 'text-white',
     button: 'bg-purple-600 text-white hover:bg-purple-700 transform hover:scale-105',
     container: 'bg-gray-800/50 backdrop-blur-md'
   },
   light: {
-    background: 'bg-white',
+    background: 'bg-gray-200',
     text: 'text-gray-900',
     button: 'bg-purple-600 text-white hover:bg-purple-700 transform hover:scale-105',
     container: 'bg-gray-50/80 backdrop-blur-md'
@@ -60,6 +60,12 @@ const Profile = () => {
   useEffect(() => {
     fetchProfile();
   }, [username]);
+
+  useEffect(() => {
+    if (user?.username) {
+      fetchProfile();
+    }
+  }, [user?.theme]);
 
   const fetchProfile = async () => {
     try {
