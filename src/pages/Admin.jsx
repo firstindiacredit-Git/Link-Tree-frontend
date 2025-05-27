@@ -15,7 +15,7 @@ const Admin = () => {
 
   const fetchUser = async () => {
     try {
-      const res = await axios.get(`http://localhost:5000/api/users/${username}`);
+      const res = await axios.get(`https://link-tree-backend-theta.vercel.app/api/users/${username}`);
       setUser(res.data);
     } catch (err) {
       console.error(err);
@@ -46,7 +46,7 @@ const Admin = () => {
 
   const saveProfile = async () => {
     try {
-      await axios.post(`http://localhost:5000/api/users/update/${username}`, user);
+      await axios.post(`https://link-tree-backend-theta.vercel.app/api/users/update/${username}`, user);
       setSuccess('Profile saved successfully!');
       setError('');
     } catch (err) {

@@ -21,7 +21,7 @@ export const AuthProvider = ({ children }) => {
 
   const fetchUser = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/api/users/me/profile');
+      const res = await axios.get('https://link-tree-backend-theta.vercel.app/api/users/me/profile');
       setUser(res.data);
     } catch (error) {
       localStorage.removeItem('token');
@@ -32,7 +32,7 @@ export const AuthProvider = ({ children }) => {
   };
 
   const login = async (email, password) => {
-    const res = await axios.post('http://localhost:5000/api/auth/login', {
+    const res = await axios.post('https://link-tree-backend-theta.vercel.app/api/auth/login', {
       email,
       password
     });
@@ -44,7 +44,7 @@ export const AuthProvider = ({ children }) => {
   };
 
   const register = async (username, email, password) => {
-    const res = await axios.post('http://localhost:5000/api/auth/register', {
+    const res = await axios.post('https://link-tree-backend-theta.vercel.app/api/auth/register', {
       username,
       email,
       password

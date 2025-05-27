@@ -63,7 +63,7 @@ const Dashboard = () => {
 
   const fetchProfile = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/api/users/me/profile');
+      const res = await axios.get('https://link-tree-backend-theta.vercel.app/api/users/me/profile');
       setProfile({
         bio: res.data.bio || '',
         avatar: res.data.avatar || '',
@@ -118,7 +118,7 @@ const Dashboard = () => {
       const updatedLinks = [...profile.links, newLinkEntry];
 
       // Send only the links array to update
-      const response = await axios.post('http://localhost:5000/api/users/update', {
+      const response = await axios.post('https://link-tree-backend-theta.vercel.app/api/users/update', {
         links: updatedLinks
       });
 
@@ -149,7 +149,7 @@ const Dashboard = () => {
       const updatedLinks = profile.links.filter((_, i) => i !== index);
 
       // Send only the links array to update
-      const response = await axios.post('http://localhost:5000/api/users/update', {
+      const response = await axios.post('https://link-tree-backend-theta.vercel.app/api/users/update', {
         links: updatedLinks
       });
 
@@ -179,7 +179,7 @@ const Dashboard = () => {
         throw new Error('All links must have both platform name and URL');
       }
 
-      const response = await axios.post('http://localhost:5000/api/users/update', {
+      const response = await axios.post('https://link-tree-backend-theta.vercel.app/api/users/update', {
         bio: profile.bio,
         theme: profile.theme,
         links: profile.links
@@ -257,7 +257,7 @@ const Dashboard = () => {
       };
 
       // Send only the links array to update
-      const response = await axios.post('http://localhost:5000/api/users/update', {
+      const response = await axios.post('https://link-tree-backend-theta.vercel.app/api/users/update', {
         links: updatedLinks
       });
 
@@ -297,7 +297,7 @@ const Dashboard = () => {
       };
 
       // Send only the links array to update
-      const response = await axios.post('http://localhost:5000/api/users/update', {
+      const response = await axios.post('https://link-tree-backend-theta.vercel.app/api/users/update', {
         links: updatedLinks
       });
 
@@ -328,7 +328,7 @@ const Dashboard = () => {
       const formData = new FormData();
       formData.append('avatar', file);
 
-      const response = await axios.post('http://localhost:5000/api/users/upload-avatar', formData, {
+      const response = await axios.post('https://link-tree-backend-theta.vercel.app/api/users/upload-avatar', formData, {
         headers: {
           'Content-Type': 'multipart/form-data'
         }
