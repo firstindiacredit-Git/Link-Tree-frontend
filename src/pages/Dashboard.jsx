@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
 import axios from 'axios';
 import { QRCodeSVG } from 'qrcode.react';
+import logo from '../assets/logo.png';
 
 const Dashboard = () => {
   const { user, logout } = useAuth();
@@ -424,9 +425,10 @@ const Dashboard = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
             <div className="flex items-center space-x-4">
-              <h1 className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-blue-500 bg-clip-text text-transparent">
+            <img src={logo} alt="LinkHub Logo" className="w-40 h-12" />
+              {/* <h1 className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-blue-500 bg-clip-text text-transparent">
               Dashboard
-            </h1>
+            </h1> */}
               <div className="h-6 w-px bg-gray-200"></div>
               <span className="text-sm text-gray-500">Welcome back, {user.username}</span>
             </div>
