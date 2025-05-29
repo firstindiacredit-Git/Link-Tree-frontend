@@ -514,7 +514,7 @@ const Dashboard = () => {
                     href={publicProfileUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="ml-2 underline text-blue-700 hover:text-blue-900"
+                    className="ml-2 w-[ch] max-w-[15ch] truncate underline text-blue-700 hover:text-blue-900"
                   >
                     {publicProfileUrl}
                   </a>
