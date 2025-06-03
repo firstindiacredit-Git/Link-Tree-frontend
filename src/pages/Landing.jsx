@@ -50,7 +50,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
       <div className="container py-4 mx-auto">
         <nav className="flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <img src={logo} alt="LinkHub Logo" className="w-40 h-12" />
+            <img src={logo} alt="Linknest Logo" className="w-40 h-12" />
             {/* <span className="text-xl font-bold">LinkHub</span> */}
           </div>
 
@@ -312,7 +312,7 @@ const ProfileDemo = () => {
             See It In <span className="text-primary-600 dark:text-primary-400">Action</span>
           </h2>
           <p className="reveal text-lg text-gray-600 dark:text-gray-400">
-            Check out these beautiful examples of LinkHub profiles.
+            Check out these beautiful examples of LinkNest profiles.
           </p>
         </div>
 
@@ -412,7 +412,7 @@ const Testimonial = ({ quote, author, role, image, delay }) => (
 const Testimonials = () => {
   const testimonials = [
     {
-      quote: "LinkHub has completely transformed how I share my content. My engagement has increased by 300% since I started using it!",
+      quote: "LinkNest has completely transformed how I share my content. My engagement has increased by 300% since I started using it!",
       author: "Anuj Rawat",
       role: "Content Creator",
       image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=256&h=256&q=80"
@@ -424,7 +424,7 @@ const Testimonials = () => {
       image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-1.2.1&auto=format&fit=crop&w=256&h=256&q=80"
     },
     {
-      quote: "Setting up my LinkHub page took less than 5 minutes. The customization options are exactly what I needed.",
+      quote: "Setting up my LinkNest page took less than 5 minutes. The customization options are exactly what I needed.",
       author: "Aman Pandey",
       role: "Photographer",
       image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=crop&w=256&h=256&q=80"
@@ -439,7 +439,7 @@ const Testimonials = () => {
             Loved by <span className="text-primary-600 dark:text-primary-400">Creators</span>
           </h2>
           <p className="reveal text-lg text-gray-600 dark:text-gray-400">
-            Join thousands of creators who are using LinkHub to grow their audience.
+            Join thousands of creators who are using LinkNest to grow their audience.
           </p>
         </div>
 
@@ -495,19 +495,19 @@ const FAQ = () => {
 
   const faqs = [
     {
-      question: 'What is LinkHub?',
-      answer: 'LinkHub is a platform that allows you to create a beautiful, customizable page that houses all your important links in one place. Instead of sharing multiple links, you can share just one.'
+      question: 'What is LinkNest?',
+      answer: 'LinkNest is a platform that allows you to create a beautiful, customizable page that houses all your important links in one place. Instead of sharing multiple links, you can share just one.'
     },
     {
-      question: 'How do I get started with LinkHub?',
-      answer: 'Getting started is easy! Simply sign up for a free account, customize your profile with a photo and bio, add your links, and choose a theme. Your LinkHub page will be ready to share in minutes.'
+      question: 'How do I get started with LinkNest?',
+      answer: 'Getting started is easy! Simply sign up for a free account, customize your profile with a photo and bio, add your links, and choose a theme. Your LinkNest page will be ready to share in minutes.'
     },
     {
       question: 'Can I use my own custom domain?',
-      answer: 'Yes! Our Pro and Business plans allow you to connect your own custom domain to your LinkHub page for a more professional and branded experience.'
+      answer: 'Yes! Our Pro and Business plans allow you to connect your own custom domain to your LinkNest page for a more professional and branded experience.'
     },
     {
-      question: 'What kind of analytics does LinkHub provide?',
+      question: 'What kind of analytics does LinkNest provide?',
       answer: 'Our analytics dashboard shows you visitor counts, link clicks, and engagement metrics. You can see which links are performing best and where your traffic is coming from to optimize your page.'
     },
     {
@@ -528,7 +528,7 @@ const FAQ = () => {
             Frequently Asked <span className="text-primary-600 dark:text-primary-400">Questions</span>
           </h2>
           <p className="reveal text-lg text-gray-600 dark:text-gray-400">
-            Everything you need to know about LinkHub.
+            Everything you need to know about LinkNest.
           </p>
         </div>
 
@@ -571,7 +571,7 @@ const CTA = () => {
                   Ready to Simplify Your <span className="text-primary-600 dark:text-primary-400">Online Presence</span>?
                 </h2>
                 <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-                  Join thousands of creators, influencers, and businesses who are using LinkHub to connect with their audience.
+                  Join thousands of creators, influencers, and businesses who are using LinkNest to connect with their audience.
                 </p>
               </div>
               
@@ -612,7 +612,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="col-span-1 md:col-span-1">
             <div className="flex items-center gap-2 mb-4">
-              <img src={logo} alt="LinkHub Logo" className="w-40 h-12" />
+              <img src={logo} alt="LinkNest Logo" className="w-40 h-12" />
               {/* <span className="text-xl font-bold">LinkHub</span> */}
             </div>
             <p className="text-gray-600 dark:text-gray-400 mb-4">
@@ -670,7 +670,7 @@ const Footer = () => {
         
         <div className="mt-12 pt-8 border-t border-gray-200 dark:border-gray-700 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-500 dark:text-gray-400">
-            &copy; {new Date().getFullYear()} LinkHub. All rights reserved.
+            &copy; {new Date().getFullYear()} LinkNest. All rights reserved.
           </p>
           <p className="text-gray-500 dark:text-gray-400 flex items-center mt-4 md:mt-0">
             Made with <Heart className="h-4 w-4 mx-1 text-accent-500" /> by the Linknest Team
@@ -749,7 +749,7 @@ const Pricing = () => {
         'Up to 5 links',
         'Limited customization',
         'Basic analytics',
-        'LinkHub branding'
+        'LinkNest branding'
       ],
       popular: false
     },
@@ -762,7 +762,7 @@ const Pricing = () => {
         'Custom themes',
         'Advanced analytics',
         'Custom domain',
-        'No LinkHub branding',
+        'No LinkNest branding',
         'Priority support'
       ],
       popular: true
