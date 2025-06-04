@@ -561,7 +561,7 @@ const Dashboard = () => {
                       type="text"
                       value={newLink.platform}
                       onChange={(e) => handleNewLinkChange('platform', e.target.value)}
-                        className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-300"
+                        className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-300 text-gray-900"
                         placeholder="e.g., YouTube, Instagram, Twitter"
                     />
                   </div>
@@ -571,7 +571,7 @@ const Dashboard = () => {
                       type="text"
                       value={newLink.url}
                       onChange={(e) => handleNewLinkChange('url', e.target.value)}
-                        className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-300"
+                        className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-300 text-gray-900"
                         placeholder="https://www.example.com/"
                     />
                   </div>
@@ -605,7 +605,7 @@ const Dashboard = () => {
                                       type="text"
                                       value={editLinkData.title}
                                       onChange={(e) => handleEditLinkChange('title', e.target.value)}
-                                      className="w-full px-3 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-300"
+                                      className="w-full px-3 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-300 text-gray-900"
                                       placeholder="Enter platform name"
                                     />
                                   </div>
@@ -615,7 +615,7 @@ const Dashboard = () => {
                         type="text"
                                       value={editLinkData.url}
                                       onChange={(e) => handleEditLinkChange('url', e.target.value)}
-                                      className="w-full px-3 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-300"
+                                      className="w-full px-3 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-300 text-gray-900"
                                       placeholder="Enter platform URL"
                                     />
                                   </div>
@@ -911,7 +911,7 @@ const Dashboard = () => {
                 <textarea
                   value={profile.bio}
                   onChange={(e) => handleChange('bio', e.target.value)}
-                  className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-300"
+                  className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-300 text-gray-900"
                   rows="3"
                   placeholder="Tell us about yourself..."
                 />
@@ -922,7 +922,7 @@ const Dashboard = () => {
                 <select
                   value={profile.theme}
                   onChange={(e) => handleChange('theme', e.target.value)}
-                  className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-300"
+                  className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-300 text-gray-900"
                 >
                   <option value="default">Default</option>
                   <option value="dark">Dark</option>
