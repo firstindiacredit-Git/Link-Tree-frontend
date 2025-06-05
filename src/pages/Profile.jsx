@@ -156,7 +156,7 @@ function Profile() {
 
           {/* Profile share popup (improved design) */}
           {showProfileShare && (
-            <div className="fixed left-1/2 top-1/2 z-50 -translate-x-1/2 -translate-y-1/2 bg-white p-4 sm:p-8 rounded-3xl shadow-2xl min-w-[280px] max-w-[98vw] w-[95%] sm:w-[500px] flex flex-col items-center max-h-[90vh] overflow-y-auto">
+            <div className="fixed left-1/2 top-1/2 z-50 -translate-x-1/2 -translate-y-1/2 bg-white p-4 sm:p-6 rounded-3xl shadow-2xl min-w-[280px] max-w-[98vw] w-[95%] sm:w-[500px] flex flex-col items-center max-h-[90vh] overflow-y-auto">
               <div className="flex justify-between items-center w-full mb-4 sticky top-0 bg-white z-10 pb-2">
                 <h2 className="text-base sm:text-lg font-semibold text-gray-800">Share link</h2>
                 <button
@@ -171,7 +171,7 @@ function Profile() {
                 </button>
               </div>
               {/* Preview Card */}
-              <div className="w-full flex flex-col items-center bg-gray-100 rounded-2xl p-4 sm:p-6 mb-4 sm:mb-6">
+              <div className="w-full flex flex-col items-center bg-gray-100 rounded-2xl p-4 sm:p-4 mb-4 sm:mb-6">
                 {user.avatar ? (
                   <img src={user.avatar} alt={user.username} className="w-16 sm:w-20 h-16 sm:h-20 rounded-xl mb-2 object-cover bg-white" />
                 ) : (
@@ -326,7 +326,7 @@ function Profile() {
                   </div>
                   {/* Link share popup (improved design) */}
                   {showInputIndex === index && (
-                    <div className="fixed left-1/2 top-1/2 z-50 -translate-x-1/2 -translate-y-1/2 bg-white p-4 sm:p-8 rounded-3xl shadow-2xl min-w-[280px] max-w-[98vw] w-[95%] sm:w-[500px] flex flex-col items-center max-h-[90vh] overflow-y-auto">
+                    <div className="fixed left-1/2 top-1/2 z-50 -translate-x-1/2 -translate-y-1/2 bg-white p-4 sm:p-6 rounded-3xl shadow-2xl min-w-[280px] max-w-[98vw] w-[95%] sm:w-[500px] flex flex-col items-center max-h-[90vh] overflow-y-auto">
                       <div className="flex justify-between items-center w-full mb-4 sticky top-0 bg-white z-10 pb-2">
                         <h2 className="text-base sm:text-lg font-semibold text-gray-800">Share link</h2>
                         <button
@@ -341,7 +341,7 @@ function Profile() {
                         </button>
                       </div>
                       {/* Preview Card */}
-                      <div className="w-full flex flex-col items-center bg-gray-100 rounded-2xl p-4 sm:p-6 mb-4 sm:mb-6">
+                      <div className="w-full flex flex-col items-center bg-gray-100 rounded-2xl p-4 sm:p-4 mb-4 sm:mb-6">
                         {faviconUrl ? (
                           <img src={faviconUrl} alt={link.title} className="w-16 sm:w-20 h-16 sm:h-20 rounded-xl mb-2 object-contain bg-white" />
                         ) : (
