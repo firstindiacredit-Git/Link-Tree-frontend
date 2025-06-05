@@ -84,7 +84,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
 
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="p-2 md:hidden rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+              className="p-2 md:hidden rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors relative z-50"
               aria-label="Toggle menu"
             >
               {isMenuOpen ? (

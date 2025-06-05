@@ -429,8 +429,8 @@ const Dashboard = () => {
               {/* <h1 className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-blue-500 bg-clip-text text-transparent">
               Dashboard
             </h1> */}
-              <div className="h-6 w-px bg-gray-200"></div>
-              <span className="text-sm text-gray-500">Welcome back, {user.username}</span>
+              <div className="hidden sm:block h-6 w-px bg-gray-200"></div>
+              <span className="hidden sm:block text-sm text-gray-500">Welcome back, {user.username}</span>
             </div>
             
             {/* Premium Avatar and Dropdown */}
@@ -503,13 +503,13 @@ const Dashboard = () => {
 
       {/* Main Content with padding-top to account for fixed header */}
       <div className="pt-20">
-        <div className="max-w-7xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-24">
+        <div className="max-w-7xl mx-auto px-4 py-4 sm:py-6 lg:py-8 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-24">
             {/* Left Column - Social Links */}
             <div className="lg:col-span-2">
               {/* Linktree Live Box */}
-              <div className="mb-6 flex items-center justify-between bg-blue-100 rounded-2xl px-6 py-4">
-                <div className="flex items-center gap-2">
+              <div className="mb-6 flex flex-col sm:flex-row items-start sm:items-center justify-between bg-blue-100 rounded-2xl px-4 sm:px-6 py-4 gap-4 sm:gap-0">
+                <div className="flex items-center gap-2 flex-wrap">
                   <span className="text-xl">🔥</span>
                   <span className="font-semibold text-gray-700">Your Linktree is live:</span>
                   <a
@@ -521,15 +521,15 @@ const Dashboard = () => {
                     {publicProfileUrl}
                   </a>
                 </div>
-                <div className="flex items-center gap-3">
+                <div className="flex items-center gap-3 w-full sm:w-auto">
                   <button
                     onClick={() => setShowQRModal(true)}
-                    className="bg-white font-semibold px-6 py-2 rounded-full shadow hover:bg-gray-100 transition border border-gray-200 flex items-center gap-2"
+                    className="flex-1 sm:flex-none bg-white font-semibold px-4 sm:px-6 py-2 rounded-full shadow hover:bg-gray-100 transition border border-gray-200 flex items-center justify-center gap-2"
                   >
                     <svg className="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 4v1m6 11h2m-6 0h-2v4m0-11v2m0 5h.01M12 12h4.01M16 20h4M4 12h4m12 0h.01M5 8h2a1 1 0 001-1V5a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1zm12 0h2a1 1 0 001-1V5a1 1 0 00-1-1h-2a1 1 0 00-1 1v2a1 1 0 001 1zM5 20h2a1 1 0 001-1v-2a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1z" />
                     </svg>
-                   <span className="text-gray-600">QR Code</span> 
+                    <span className="text-gray-600">QR Code</span> 
                   </button>
                   <button
                     onClick={() => {
@@ -537,59 +537,59 @@ const Dashboard = () => {
                       setCopied(true);
                       setTimeout(() => setCopied(false), 1500);
                     }}
-                    className="bg-white text-gray-600 font-semibold px-6 py-2 rounded-full shadow hover:bg-gray-100 transition border border-gray-200"
+                    className="flex-1 sm:flex-none bg-white text-gray-600 font-semibold px-4 sm:px-6 py-2 rounded-full shadow hover:bg-gray-100 transition border border-gray-200"
                   >
                     {copied ? 'Copied!' : 'Copy URL'}
                   </button>
                 </div>
               </div>
-              <div className="bg-white rounded-2xl shadow-xl p-8 transition-all duration-300 hover:shadow-2xl border border-gray-100">
-                <div className="flex items-center justify-between mb-8">
-                  <h2 className="text-2xl font-semibold bg-gradient-to-r from-purple-600 to-blue-500 bg-clip-text text-transparent">
+              <div className="bg-white rounded-2xl shadow-xl p-4 sm:p-6 lg:p-8 transition-all duration-300 hover:shadow-2xl border border-gray-100">
+                <div className="flex items-center justify-between mb-6 sm:mb-8">
+                  <h2 className="text-xl sm:text-2xl font-semibold bg-gradient-to-r from-purple-600 to-blue-500 bg-clip-text text-transparent">
                     Social Links
                   </h2>
                   <span className="text-sm text-gray-500">{profile.links.length} links</span>
-            </div>
+                </div>
 
                 {/* Add New Link Form */}
-                <div className="mb-8 bg-gray-50 p-6 rounded-xl border border-gray-100">
-                  <h3 className="text-lg font-medium text-gray-900 mb-4">Add New Link</h3>
+                <div className="mb-6 sm:mb-8 bg-gray-50 p-4 sm:p-6 rounded-xl border border-gray-100">
+                  <h3 className="text-base sm:text-lg font-medium text-gray-900 mb-4">Add New Link</h3>
                   <div className="grid grid-cols-1 gap-4">
-            <div>
+                    <div>
                       <label className="block text-sm font-medium text-gray-700 mb-2">Platform Name</label>
-                    <input
-                      type="text"
-                      value={newLink.platform}
-                      onChange={(e) => handleNewLinkChange('platform', e.target.value)}
-                        className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-300 text-gray-900"
+                      <input
+                        type="text"
+                        value={newLink.platform}
+                        onChange={(e) => handleNewLinkChange('platform', e.target.value)}
+                        className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-300 text-gray-900"
                         placeholder="e.g., YouTube, Instagram, Twitter"
-                    />
-                  </div>
-                  <div>
+                      />
+                    </div>
+                    <div>
                       <label className="block text-sm font-medium text-gray-700 mb-2">Platform URL</label>
-                    <input
-                      type="text"
-                      value={newLink.url}
-                      onChange={(e) => handleNewLinkChange('url', e.target.value)}
-                        className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-300 text-gray-900"
+                      <input
+                        type="text"
+                        value={newLink.url}
+                        onChange={(e) => handleNewLinkChange('url', e.target.value)}
+                        className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-300 text-gray-900"
                         placeholder="https://www.example.com/"
-                    />
+                      />
+                    </div>
                   </div>
+                  <button
+                    onClick={addLink}
+                    className="w-full mt-4 bg-gradient-to-r from-purple-600 to-blue-500 text-white py-2 sm:py-3 rounded-lg font-medium hover:opacity-90 transform hover:scale-[1.02] transition-all duration-300 shadow-md hover:shadow-lg"
+                  >
+                    Add Social Link
+                  </button>
                 </div>
-                <button
-                  onClick={addLink}
-                    className="w-full mt-4 bg-gradient-to-r from-purple-600 to-blue-500 text-white py-3 rounded-lg font-medium hover:opacity-90 transform hover:scale-[1.02] transition-all duration-300 shadow-md hover:shadow-lg"
-                >
-                  Add Social Link
-                </button>
-              </div>
 
                 {/* Links List */}
-              <div className="space-y-4">
+                <div className="space-y-4">
                   {profile.links && profile.links.length > 0 ? (
                     profile.links.map((link, idx) => (
                       <div key={idx} className="bg-white border border-gray-100 rounded-xl shadow-sm hover:shadow-md transition-all duration-300">
-                        <div className="p-4 flex items-start justify-between">
+                        <div className="p-3 sm:p-4 flex items-start justify-between">
                           <div className="flex items-start gap-3">
                             <div className="mt-1">
                               <svg className="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -611,8 +611,8 @@ const Dashboard = () => {
                                   </div>
                                   <div>
                                     <label className="block text-sm font-medium text-gray-700 mb-1">Platform URL</label>
-                      <input
-                        type="text"
+                                    <input
+                                      type="text"
                                       value={editLinkData.url}
                                       onChange={(e) => handleEditLinkChange('url', e.target.value)}
                                       className="w-full px-3 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-300 text-gray-900"
@@ -647,7 +647,7 @@ const Dashboard = () => {
                                       </svg>
                                     </button>
                                   </div>
-                                  <span className="text-sm text-gray-500">{link.url}</span>
+                                  <span className="text-sm text-gray-500 break-all">{link.url}</span>
                                 </>
                               )}
                             </div>
@@ -667,8 +667,8 @@ const Dashboard = () => {
                           </div>
                         </div>
 
-                        <div className="border-t border-gray-100 px-4 py-3 flex items-center justify-between bg-gray-50 rounded-b-xl">
-                          <div className="flex items-center gap-4">
+                        <div className="border-t border-gray-100 px-3 sm:px-4 py-3 flex flex-wrap items-center justify-between gap-3 bg-gray-50 rounded-b-xl">
+                          <div className="flex items-center gap-2 sm:gap-4">
                             <button className="p-1.5 text-gray-400 hover:text-gray-600 bg-white rounded-lg shadow-sm hover:shadow transition-all duration-300">
                               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 3h6m-6 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V6a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
@@ -703,8 +703,8 @@ const Dashboard = () => {
                       </div>
                     ))
                   ) : (
-                    <div className="text-center py-12">
-                      <svg className="w-16 h-16 text-gray-300 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <div className="text-center py-8 sm:py-12">
+                      <svg className="w-12 sm:w-16 h-12 sm:h-16 text-gray-300 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
                       </svg>
                       <p className="text-gray-500">No links added yet. Add your first social link above!</p>
@@ -749,9 +749,9 @@ const Dashboard = () => {
                   </style>
 
                   {/* Avatar */}
-                  <div className="mt-10 mb-4 relative">
+                  <div className="mt-8 sm:mt-10 mb-4 relative">
                     <div 
-                      className="w-24 h-24 rounded-full border-4 border-white mx-auto flex items-center justify-center overflow-hidden shadow-lg cursor-pointer group relative"
+                      className="w-20 sm:w-24 h-20 sm:h-24 rounded-full border-4 border-white mx-auto flex items-center justify-center overflow-hidden shadow-lg cursor-pointer group relative"
                       onClick={() => fileInputRef.current?.click()}
                     >
                       {profile.avatar ? (
@@ -762,11 +762,11 @@ const Dashboard = () => {
                             className="w-full h-full object-cover rounded-full"
                           />
                           <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            <span className="text-white text-sm font-medium">Change Photo</span>
+                            <span className="text-white text-xs sm:text-sm font-medium">Change Photo</span>
                           </div>
                         </>
                       ) : (
-                        <span className="text-gray-400 text-4xl">?</span>
+                        <span className="text-gray-400 text-3xl sm:text-4xl">?</span>
                       )}
                       <input
                         type="file"
@@ -785,44 +785,44 @@ const Dashboard = () => {
                   </div>
 
                   {/* Username */}
-                  <h1 className={`text-xl font-bold mb-1 ${theme.text}`}>@{user.username}</h1>
+                  <h1 className={`text-lg sm:text-xl font-bold mb-1 ${theme.text}`}>@{user.username}</h1>
                   
                   {/* Bio */}
-                  <p className={`text-sm mb-6 text-center text-gray-600 px-6 ${theme.text}`}>{profile.bio || 'No bio provided.'}</p>
+                  <p className={`text-sm mb-6 text-center text-gray-600 px-4 sm:px-6 ${theme.text}`}>{profile.bio || 'No bio provided.'}</p>
 
                   {/* Links */}
-                  <div className="w-full flex flex-col gap-4 items-center py-2 px-4 pb-8">
+                  <div className="w-full flex flex-col gap-3 sm:gap-4 items-center py-2 px-3 sm:px-4 pb-6 sm:pb-8">
                     {profile.links && profile.links.length > 0 ? (
                       profile.links
                         .filter(link => link.active)
                         .map((link, idx) => (
                           <div 
                             key={idx} 
-                            className="w-full flex items-center bg-white/90 backdrop-blur-sm rounded-[32px] shadow-lg p-3 px-5 transition-all duration-300 group hover:shadow-xl hover:bg-white/95"
+                            className="w-full flex items-center bg-white/90 backdrop-blur-sm rounded-[32px] shadow-lg p-2.5 sm:p-3 px-4 sm:px-5 transition-all duration-300 group hover:shadow-xl hover:bg-white/95"
                           >
                             {getFaviconUrl(link.url) ? (
                               <img
                                 src={getFaviconUrl(link.url)}
                                 alt={link.title}
-                                className="w-8 h-8 rounded-full object-contain mr-3"
+                                className="w-6 sm:w-8 h-6 sm:h-8 rounded-full object-contain mr-2 sm:mr-3"
                                 onError={e => { e.target.style.display = 'none'; }}
                               />
                             ) : (
-                              <div className="w-8 h-8 rounded-full bg-gray-200 mr-3 flex items-center justify-center">
-                                <svg className="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <div className="w-6 sm:w-8 h-6 sm:h-8 rounded-full bg-gray-200 mr-2 sm:mr-3 flex items-center justify-center">
+                                <svg className="w-3 sm:w-4 h-3 sm:h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
                                 </svg>
                               </div>
                             )}
-                            <span className="flex-1 text-[#222] font-medium text-base truncate">
+                            <span className="flex-1 text-[#222] font-medium text-sm sm:text-base truncate">
                               {link.title}
                             </span>
-                            <span className="ml-2 text-gray-400 text-2xl font-bold select-none group-hover:text-gray-600 transition-colors">&#8230;</span>
+                            <span className="ml-2 text-gray-400 text-xl sm:text-2xl font-bold select-none group-hover:text-gray-600 transition-colors">&#8230;</span>
                           </div>
                         ))
                     ) : (
-                      <div className="text-gray-400 text-center py-8">
-                        <svg className="w-12 h-12 mx-auto mb-3 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <div className="text-gray-400 text-center py-6 sm:py-8">
+                        <svg className="w-10 sm:w-12 h-10 sm:h-12 mx-auto mb-3 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
                         </svg>
                         <p>No links added yet.</p>
@@ -928,16 +928,16 @@ const Dashboard = () => {
                   <option value="dark">Dark</option>
                   <option value="light">Light</option>
                 </select>
-            </div>
+              </div>
 
               <div className="flex space-x-4">
-            <button
-              onClick={saveProfile}
-              disabled={loading}
+                <button
+                  onClick={saveProfile}
+                  disabled={loading}
                   className="flex-1 bg-gradient-to-r from-purple-600 to-blue-500 text-white py-3 rounded-lg font-medium hover:opacity-90 transform hover:scale-[1.02] transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
-            >
-              {loading ? 'Saving...' : 'Save Changes'}
-            </button>
+                >
+                  {loading ? 'Saving...' : 'Save Changes'}
+                </button>
                 <button
                   onClick={() => setShowUpdateModal(false)}
                   className="flex-1 bg-gray-100 text-gray-700 py-3 rounded-lg font-medium hover:bg-gray-200 transition-all duration-300"
@@ -1045,7 +1045,7 @@ const Dashboard = () => {
                       className="flex flex-col items-center justify-center p-3 bg-white rounded-lg hover:bg-gray-50 transition-colors"
                     >
                       <svg className="w-6 h-6 text-[#0088cc]" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
+                        <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.306.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
                       </svg>
                       <span className="text-xs mt-1">Telegram</span>
                     </button>
