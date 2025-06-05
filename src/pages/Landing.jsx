@@ -189,15 +189,28 @@ const Hero = () => {
             </div>
             
             <div className="reveal mt-8 flex items-center justify-center lg:justify-start space-x-4">
-              <p className="text-sm text-gray-600 dark:text-gray-400">Trusted by over 10,000+ creators</p>
+              <p className="text-sm text-gray-600 dark:text-gray-400">Trusted by over 1,000+ creators</p>
               <div className="flex -space-x-2">
-                {[1, 2, 3, 4].map((i) => (
-                  <div 
-                    key={i}
-                    className="w-8 h-8 rounded-full border-2 border-white dark:border-gray-900 bg-gray-200 dark:bg-gray-700"
-                    aria-hidden="true"
-                  />
-                ))}
+                <img 
+                  src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-1.2.1&auto=format&fit=crop&w=256&h=256&q=80" 
+                  alt="Creator 1"
+                  className="w-8 h-8 rounded-full border-2 border-white dark:border-gray-900 object-cover"
+                />
+                <img 
+                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&auto=format&fit=crop&w=256&h=256&q=80" 
+                  alt="Creator 2"
+                  className="w-8 h-8 rounded-full border-2 border-white dark:border-gray-900 object-cover"
+                />
+                <img 
+                  src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-1.2.1&auto=format&fit=crop&w=256&h=256&q=80" 
+                  alt="Creator 3"
+                  className="w-8 h-8 rounded-full border-2 border-white dark:border-gray-900 object-cover"
+                />
+                <img 
+                  src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-1.2.1&auto=format&fit=crop&w=256&h=256&q=80" 
+                  alt="Creator 4"
+                  className="w-8 h-8 rounded-full border-2 border-white dark:border-gray-900 object-cover"
+                />
               </div>
             </div>
           </div>
