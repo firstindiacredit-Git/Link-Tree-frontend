@@ -75,12 +75,20 @@ const Navbar = ({ darkMode, setDarkMode }) => {
               )}
             </button>
 
-            <button
-              onClick={() => navigate('/register')}
-              className="hidden md:block btn-primary"
-            >
-              Get Started
-            </button>
+            <div className="hidden md:flex items-center gap-3">
+              <button
+                onClick={() => navigate('/login')}
+                className="btn-secondary"
+              >
+                Sign In
+              </button>
+              <button
+                onClick={() => navigate('/register')}
+                className="btn-primary"
+              >
+                Sign Up
+              </button>
+            </div>
 
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -132,12 +140,20 @@ const Navbar = ({ darkMode, setDarkMode }) => {
           >
             FAQ
           </LinkComponent>
-          <button
-            onClick={() => { setIsMenuOpen(false); navigate('/register'); }}
-            className="btn-primary mt-4 w-full text-center"
-          >
-            Get Started
-          </button>
+          <div className="flex flex-col gap-3 w-full">
+            <button
+              onClick={() => { setIsMenuOpen(false); navigate('/login'); }}
+              className="btn-secondary w-full text-center"
+            >
+              Sign In
+            </button>
+            <button
+              onClick={() => { setIsMenuOpen(false); navigate('/register'); }}
+              className="btn-primary w-full text-center"
+            >
+              Sign Up
+            </button>
+          </div>
         </nav>
       </div>
     </header>
