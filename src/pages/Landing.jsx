@@ -448,7 +448,7 @@ const Testimonials = () => {
     },
     {
       quote: "The analytics feature is a game-changer. I can now see exactly which links my audience engages with the most.",
-      author: "Maya Singh",
+      author: "Kajal Singh",
       role: "Digital Marketer",
       image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-1.2.1&auto=format&fit=crop&w=256&h=256&q=80"
     },
